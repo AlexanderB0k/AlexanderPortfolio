@@ -51,7 +51,9 @@
 }
 
 .skill-icon {
-  font-size: 2rem;
+  width: 2rem;
+  height: 2rem;
+  flex-shrink: 0;
 }
 
 .skill-name {

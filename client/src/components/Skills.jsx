@@ -1,13 +1,27 @@
 import { useEffect, useRef, useState } from 'react'
+import {
+  SiJavascript,
+  SiReact,
+  SiNodedotjs,
+  SiHtml5,
+  SiCss,
+  SiGit,
+  SiFigma,
+  SiWordpress,
+} from 'react-icons/si'
+import { GrAdobeCreativeCloud } from 'react-icons/gr'
 import './Skills.css'
 
-// TODO: replace with your own skills (and swap emoji for real icons/an icon library if you like)
 const skills = [
-  { name: 'JavaScript', icon: '🟨' },
-  { name: 'React', icon: '⚛️' },
-  { name: 'Node.js', icon: '🟩' },
-  { name: 'HTML & CSS', icon: '🎨' },
-  { name: 'Git', icon: '🔧' },
+  { name: 'JavaScript', icon: SiJavascript, color: '#F7DF1E' },
+  { name: 'React', icon: SiReact, color: '#61DAFB' },
+  { name: 'Node.js', icon: SiNodedotjs, color: '#339933' },
+  { name: 'HTML', icon: SiHtml5, color: '#E34F26' },
+  { name: 'CSS', icon: SiCss, color: '#1572B6' },
+  { name: 'Git', icon: SiGit, color: '#F05032' },
+  { name: 'Figma', icon: SiFigma, color: '#F24E1E' },
+  { name: 'Adobe Creative Cloud', icon: GrAdobeCreativeCloud, color: '#DA1F26' },
+  { name: 'WordPress', icon: SiWordpress, color: '#21759B' },
 ]
 
 function Skills() {
@@ -38,12 +52,10 @@ function Skills() {
         <h1>Skills</h1>
       </div>
       <div className="skills-items">
-        {skills.map((skill) => (
-          <div key={skill.name} className="skill">
-            <span className="skill-icon" aria-hidden="true">
-              {skill.icon}
-            </span>
-            <span className="skill-name">{skill.name}</span>
+        {skills.map(({ name, icon: Icon, color }) => (
+          <div key={name} className="skill">
+            <Icon className="skill-icon" fill={color} aria-hidden="true" />
+            <span className="skill-name">{name}</span>
           </div>
         ))}
       </div>

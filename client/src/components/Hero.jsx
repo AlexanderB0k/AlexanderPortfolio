@@ -11,11 +11,7 @@ function Hero() {
           Hi, I'm <span className="typing-name">{name}</span>
           <span className="typing-cursor">|</span>
         </h1>
-        <p className="tagline">
-          {/* TODO: one or two sentences describing what you do */}
-          I build things for the web. This is my portfolio, showcasing
-          projects I've worked on and how to reach me.
-        </p>
+        <p className="about-role">Developer &amp; Designer</p>
         <div className="hero-actions">
           <a className="btn btn-primary" href="#projects">
             View my work
@@ -25,10 +21,11 @@ function Hero() {
           </a>
         </div>
       </div>
-      {/* TODO: replace with a real photo/avatar in src/assets and import it here */}
-      <div className="hero-avatar" aria-hidden="true">
-        A
-      </div>
+      <img
+        className="hero-avatar"
+        src="/images/alexander-photo.jpg"
+        alt="Alexander Bok"
+      />
     </section>
   )
 }

@@ -1,18 +1,26 @@
+import { FaGithub, FaLinkedin } from 'react-icons/fa6'
+import { SiGmail } from 'react-icons/si'
+
 function Contact() {
   return (
     <section id="contact" className="section">
       <h2>Contact</h2>
-      <p>
-        {/* TODO: adjust the call to action */}
-        Want to work together or just say hi? Reach out below.
-      </p>
+      <p>Want to work together or just say hi? Reach out below.</p>
       <div className="contact-links">
-        {/* TODO: replace with your real email and profile links */}
-        <a href="mailto:you@example.com">you@example.com</a>
+        <a href="mailto:aalexanderb0k@gmail.com">
+          <SiGmail size={18} />
+          aalexanderb0k@gmail.com
+        </a>
         <a href="https://github.com/AlexanderB0k" target="_blank" rel="noreferrer">
+          <FaGithub size={18} />
           GitHub
         </a>
-        <a href="https://www.linkedin.com/in/your-profile" target="_blank" rel="noreferrer">
+        <a
+          href="https://www.linkedin.com/in/alexander-bok-74b30724a/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <FaLinkedin size={18} />
           LinkedIn
         </a>
       </div>

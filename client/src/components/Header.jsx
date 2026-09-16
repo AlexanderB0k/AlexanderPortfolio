@@ -6,6 +6,7 @@ const links = [
   { href: '#skills', label: 'Skills' },
   { href: '#projects', label: 'Projects' },
   { href: '#contact', label: 'Contact' },
+  { href: '/alexander-bok-resume.pdf', label: 'Resume', external: true },
 ]
 
 function Header() {
@@ -44,11 +45,23 @@ function Header() {
         </div>
 
         <div className={`nav-links ${open ? 'active' : ''}`}>
-          {links.map((link) => (
-            <a key={link.href} href={link.href} onClick={closeMenu}>
-              {link.label}
-            </a>
-          ))}
+          {links.map((link) =>
+            link.external ? (
+              <a
+                key={link.href}
+                href={link.href}
+                target="_blank"
+                rel="noreferrer"
+                onClick={closeMenu}
+              >
+                {link.label}
+              </a>
+            ) : (
+              <a key={link.href} href={link.href} onClick={closeMenu}>
+                {link.label}
+              </a>
+            ),
+          )}
         </div>
       </div>
     </nav>
