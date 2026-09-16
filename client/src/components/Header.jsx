@@ -1,11 +1,12 @@
 import { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
 import './Header.css'
 
 const links = [
-  { href: '#about', label: 'About' },
-  { href: '#skills', label: 'Skills' },
-  { href: '#projects', label: 'Projects' },
-  { href: '#contact', label: 'Contact' },
+  { href: '/#about', label: 'About' },
+  { href: '/#skills', label: 'Skills' },
+  { href: '/#projects', label: 'Projects' },
+  { href: '/#contact', label: 'Contact' },
   { href: '/alexander-bok-resume.pdf', label: 'Resume', external: true },
 ]
 
@@ -25,10 +26,9 @@ function Header() {
     <nav className={scrolled ? 'scrolled' : ''}>
       <div className="container">
         <div className="nav-left">
-          <a className="nav-title" href="#top">
-            {/* TODO: your name */}
+          <Link className="nav-title" to="/" onClick={closeMenu}>
             <span>Alexander</span>
-          </a>
+          </Link>
         </div>
 
         <div
@@ -57,9 +57,9 @@ function Header() {
                 {link.label}
               </a>
             ) : (
-              <a key={link.href} href={link.href} onClick={closeMenu}>
+              <Link key={link.href} to={link.href} onClick={closeMenu}>
                 {link.label}
-              </a>
+              </Link>
             ),
           )}
         </div>
