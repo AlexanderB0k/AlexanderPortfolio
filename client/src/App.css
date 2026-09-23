@@ -20,7 +20,7 @@ main {
 
 .about-container {
   background-color: #1b1c20;
-  padding: 4rem 2rem;
+  padding: 2rem 1rem;
 }
 
 .about-inner {
@@ -302,6 +302,11 @@ main {
 
 /* ---------- project detail page ---------- */
 
+.project-detail {
+  padding-top: 96px;
+  max-width: none;
+}
+
 .project-back-link {
   display: inline-flex;
   align-items: center;
@@ -315,10 +320,6 @@ main {
 .project-back-link:hover {
   color: var(--accent);
   transform: translateX(-2px);
-}
-
-.project-back-link-bottom {
-  margin-top: 48px;
 }
 
 .project-detail-title {
@@ -355,7 +356,7 @@ main {
 
 .project-detail-body {
   margin-top: 32px;
-  max-width: 820px;
+  max-width: none;
 }
 
 .project-detail-body h2 {
@@ -394,6 +395,12 @@ main {
   display: block;
 }
 
+.project-overview-grid-item-placeholder {
+  width: 100%;
+  height: 100%;
+  background: var(--code-bg);
+}
+
 /* Quoth the Raven — big screenshot left, two stacked right */
 .project-overview-grid-quoth-the-raven .item-1 {
   grid-column: span 4;
@@ -408,7 +415,6 @@ main {
 .project-overview-grid-quoth-the-raven .item-3 {
   grid-column: span 2;
   grid-row: span 1;
-  align-self: start;
 }
 
 /* Looking for Group — tall sidebar column, two square shots, wide login strip, full banner */
@@ -521,6 +527,134 @@ main {
   line-height: 1.6;
 }
 
+/* narrative "what I did" blocks — text paired with a photo placeholder */
+.project-narrative {
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.project-narrative-row {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.project-narrative-row p {
+  margin: 0;
+  flex: 1;
+  color: var(--text);
+  line-height: 1.65;
+}
+
+.project-narrative-lead {
+  font-size: 19px;
+  font-weight: 600;
+  color: var(--text-h);
+}
+
+.project-photo-placeholder {
+  flex-shrink: 0;
+  background: var(--code-bg);
+  border: 1px dashed var(--border);
+  border-radius: 12px;
+}
+
+.project-photo-placeholder-lg {
+  width: 260px;
+  height: 180px;
+}
+
+.project-photo-placeholder-sm {
+  width: 140px;
+  height: 100px;
+}
+
+.project-photo-placeholder-full {
+  width: 100%;
+  aspect-ratio: 2.4 / 1;
+}
+
+@media (max-width: 640px) {
+  .project-narrative-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .project-photo-placeholder-lg,
+  .project-photo-placeholder-sm {
+    width: 100%;
+    height: 160px;
+  }
+}
+
+/* "what impact did I make" role breakdown */
+.project-impact-list {
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-impact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  padding: 24px 0;
+  border-top: 1px solid var(--border);
+}
+
+.project-impact-item:first-child {
+  border-top: none;
+  padding-top: 8px;
+}
+
+.project-impact-role {
+  flex: 0 0 200px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.project-impact-icon {
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: var(--code-bg);
+  color: var(--accent);
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-impact-role h3 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text-h);
+}
+
+.project-impact-item p {
+  margin: 0;
+  flex: 1;
+  color: var(--text);
+  line-height: 1.65;
+}
+
+@media (max-width: 640px) {
+  .project-impact-item {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .project-impact-role {
+    flex: none;
+  }
+}
+
 .project-external-btn {
   margin-top: 32px;
   display: inline-flex;
@@ -529,6 +663,7 @@ main {
 }
 
 .project-detail-notfound {
+  padding-top: 96px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;

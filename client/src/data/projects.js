@@ -36,6 +36,32 @@ const projects = [
       'Ran sprint planning and task tracking in Jira for the five-person team, boosting workflow efficiency by 40% and keeping communication clear across programmers and artists.',
       'Delivered 100% of the project\'s milestones on schedule.',
     ],
+    whatIDidIntro: 'Write a short line about what you did and the tools you used here.',
+    whatIDidBlocks: [
+      {
+        text: 'Write a paragraph about this part of your process here.',
+      },
+      {
+        text: 'Write a paragraph about this part of your process here.',
+      },
+    ],
+    impact: [
+      {
+        role: 'Visual artist',
+        icon: 'palette',
+        text: 'Write a paragraph about your impact in this role here.',
+      },
+      {
+        role: 'UI/UX designer',
+        icon: 'figma',
+        text: 'Write a paragraph about your impact in this role here.',
+      },
+      {
+        role: 'Gameplay & Programming',
+        icon: 'godot',
+        text: 'Write a paragraph about your impact in this role here.',
+      },
+    ],
     role_detail: 'Front-end Programmer & UI/UX Designer, Team Project',
   },
   {

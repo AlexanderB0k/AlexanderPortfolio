@@ -1,6 +1,13 @@
 import { Link, useParams } from 'react-router-dom'
-import { FaArrowLeftLong, FaArrowUpRightFromSquare } from 'react-icons/fa6'
+import { FaArrowLeftLong, FaArrowUpRightFromSquare, FaPalette, FaFigma } from 'react-icons/fa6'
+import { SiGodotengine } from 'react-icons/si'
 import projects from '../data/projects'
+
+const impactIcons = {
+  palette: FaPalette,
+  figma: FaFigma,
+  godot: SiGodotengine,
+}
 
 function ProjectDetailMedia({ media }) {
   if (media.type === 'image') {
@@ -61,21 +68,74 @@ function ProjectDetail() {
         <div className={project.gallery ? 'project-overview project-overview-with-gallery' : 'project-overview'}>
           {project.gallery && (
             <div className={`project-overview-grid project-overview-grid-${project.slug}`}>
-              {project.gallery.map((img, index) => (
-                <div className={`project-overview-grid-item item-${index + 1}`} key={img.src}>
-                  <img src={img.src} alt={img.alt} loading="lazy" />
-                </div>
-              ))}
+              {project.gallery.map((img, index) =>
+                project.galleryPlaceholders ? (
+                  <div
+                    className={`project-overview-grid-item project-overview-grid-item-placeholder item-${index + 1}`}
+                    key={img.src}
+                    aria-hidden="true"
+                  />
+                ) : (
+                  <div className={`project-overview-grid-item item-${index + 1}`} key={img.src}>
+                    <img src={img.src} alt={img.alt} loading="lazy" />
+                  </div>
+                ),
+              )}
             </div>
           )}
         </div>
 
-        <h2>What I did</h2>
-        <ul className="project-highlights">
-          {project.highlights.map((point) => (
-            <li key={point}>{point}</li>
-          ))}
-        </ul>
+        {project.whatIDidIntro ? (
+          <>
+            <h2>What I did in the project</h2>
+            <div className="project-narrative">
+              <div className="project-narrative-row project-narrative-row-lead">
+                <p className="project-narrative-lead">{project.whatIDidIntro}</p>
+                <div className="project-photo-placeholder project-photo-placeholder-lg" aria-hidden="true" />
+              </div>
+
+              {project.whatIDidBlocks.map((block, index) => (
+                <div className="project-narrative-row" key={index}>
+                  <div className="project-photo-placeholder project-photo-placeholder-sm" aria-hidden="true" />
+                  <p>{block.text}</p>
+                </div>
+              ))}
+
+              <div className="project-photo-placeholder project-photo-placeholder-full" aria-hidden="true" />
+            </div>
+          </>
+        ) : (
+          <>
+            <h2>What I did</h2>
+            <ul className="project-highlights">
+              {project.highlights.map((point) => (
+                <li key={point}>{point}</li>
+              ))}
+            </ul>
+          </>
+        )}
+
+        {project.impact && (
+          <>
+            <h2>What impact did I make on the team?</h2>
+            <div className="project-impact-list">
+              {project.impact.map((item) => {
+                const Icon = impactIcons[item.icon]
+                return (
+                  <div className="project-impact-item" key={item.role}>
+                    <div className="project-impact-role">
+                      <span className="project-impact-icon">
+                        {Icon && <Icon aria-hidden="true" />}
+                      </span>
+                      <h3>{item.role}</h3>
+                    </div>
+                    <p>{item.text}</p>
+                  </div>
+                )
+              })}
+            </div>
+          </>
+        )}
 
         {project.externalUrl && (
           <a
@@ -89,11 +149,6 @@ function ProjectDetail() {
           </a>
         )}
       </div>
-
-      <Link className="project-back-link project-back-link-bottom" to="/#projects">
-        <FaArrowLeftLong aria-hidden="true" />
-        Back to projects
-      </Link>
     </section>
   )
 }
