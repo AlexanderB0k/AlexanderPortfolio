@@ -18,13 +18,13 @@ const projects = [
     highlights: [
       'Designed and implemented the game\'s UI systems, including the pause menu and main menu, focused on keeping the player oriented without breaking the horror-cute tone of the art direction.',
       'Architected the dynamic item interaction system, letting the team add new pickups and effects without rewriting core logic.',
-      'Programmed core player and enemy mechanics — movement, combat, and AI behavior — that drive the roguelite\'s moment-to-moment gameplay.',
+      'Programmed core player and enemy mechanics, movement, combat, and AI behavior,  that drive the roguelite\'s moment-to-moment gameplay.',
       'Ran sprint planning and task tracking in Jira for the five-person team, boosting workflow efficiency by 40% and keeping communication clear across programmers and artists.',
       'Delivered 100% of the project\'s milestones on schedule.',
     ],
     overviewColumns: [
       "Quoth the Raven is a pixel-art horror, top-down roguelite built in the Godot engine by a five-person team. Players explore an ever-shifting laboratory, fighting off enemies and collecting piece to find their dad",
-      "I was part of a five-person team. And I implemented the game's UI systems — pause and main menus, item interaction, and core player/enemy mechanics, and we managed our workflow with Jira, creating milestones and track tasking for the team.",
+      "I was part of a five-person team. And I implemented the game's UI systems such as pause and main menus, item interaction, and core player/enemy mechanics, and we managed our workflow with Jira, creating milestones and track tasking for the team.",
     ],
     whatIDidIntro: 'Throughout the project we used Godot and Visual Studio Code, to implement the code for the game. For assets, we used Aesprite and Photoshop for pixel-art asset creation. I was responsible for implementing the game\'s UI systems, core player and enemy mechanics, and task tracking in Jira.',
     whatIDidBlocks: [
@@ -32,9 +32,27 @@ const projects = [
         text: 'I designed and implemented the game\'s UI systems, including the pause and main menus, to keep players oriented while maintaining a dual art style for both horror and bubbly. I then built them in Godot, connecting menu navigation, buttons, and screen transitions. I made sure the menus fit the game\'s pixel-art style, with readable text, distinct hover and selected states, and consistent spacing on all screens so they felt part of the world rather than overlaid. During development, I created visual and audio feedback for interactions to enhance the user experience. ',
       },
       {
-        text: 'The project\'s key feature was the camera: by right-clicking, the player could see the world as it really is, and I developed the camera and related mechanics. This involved creating the switch between the ordinary view and the hidden \'true\' view, ensuring a smooth, responsive transition, and integrating it into the gameplay. Thus, the camera was more than a visual effect; it showed the player things they would otherwise have missed. Because the entire game was built around this concept, I worked closely with the artists and designers to ensure both versions of the world were easy to understand, and I continually tested and adjusted the camera so it remained enjoyable to use without disrupting the flow of a playthrough.'
+        text: 'The project\'s key feature was the camera: by right-clicking, the player could see the world as it really is, and I developed the camera and related mechanics. This involved creating the switch between the ordinary view and the hidden \'true\' view, ensuring a smooth, responsive transition, and integrating it into the gameplay. The camera mechanic was central to the game because that\'s how players would find clues, solve puzzles, and navigate the environment. I also implemented the camera\'s interaction with enemies and objects.',
       },
     ],
+    whatIDidImages: {
+      lead: {
+        src: '/images/icon_for_portfolio.jpg',
+        alt: 'Tools used on the project: Godot, Visual Studio Code, and Aseprite',
+      },
+      stackTop: {
+        src: '/images/quoth-gameplay-1.png',
+        alt: 'Quoth the Raven gameplay: exploring a room with a health bar and enemies on screen',
+      },
+      stackBottom: {
+        src: '/images/quoth-gameplay-2.png',
+        alt: 'Quoth the Raven gameplay: an item interaction prompt',
+      },
+      full: {
+        src: '/images/Quoth_of_raven.png',
+        alt: 'Quoth the Raven artwork: the main character seen through a camera viewfinder',
+      },
+    },
     impact: [
       {
         role: 'Visual artist',
@@ -49,7 +67,7 @@ const projects = [
       {
         role: 'Gameplay & Programming',
         icon: 'godot',
-        text: 'I programmed core player and enemy mechanics — movement, combat, and AI behavior — that drive the roguelite\'s moment-to-moment gameplay.',
+        text: 'I programmed core player and enemy mechanics, movement, combat, and AI behavior that drive the roguelite\'s moment-to-moment gameplay.',
       },
     ],
     role_detail: 'Front-end Programmer & UI/UX Designer, Team Project',
@@ -59,7 +77,7 @@ const projects = [
     title: 'Looking for Group',
     role: 'Front-end Programmer',
     summary:
-      "A team-formation platform for RIT's College of Computing and Information Sciences (GCCIS). Students post and browse projects — games, apps, websites, film, and more — and recruit collaborators by role: developers, designers, audio creators, and engineers.",
+      "A team-formation platform for RIT's College of Computing and Information Sciences (GCCIS). Students post and browse projects games, apps, websites, film, and more and recruit collaborators by role: developers, designers, audio creators, and engineers.",
     tags: ['Front-end Development', 'Figma', 'VS Code', 'UI Design', 'Team Project'],
     externalUrl: 'https://lfg.gccis.rit.edu/',
     externalLabel: 'Visit lfg.gccis.rit.edu',
@@ -73,7 +91,7 @@ const projects = [
     gallery: [
       {
         src: '/images/lfg-sidebar.png',
-        alt: 'LFG sidebar navigation — Projects, People, and My Projects',
+        alt: 'LFG sidebar navigation Projects, People, and My Projects',
       },
       {
         src: '/images/lfg-notifications.png',
@@ -95,7 +113,7 @@ const projects = [
     highlights: [
       'Built front-end UI from Figma designs, translating wireframes into working, responsive interfaces.',
       'Worked on the project discovery experience: browsing all projects, filtering by category (Video Game, Mobile Application, Website, and more), and filtering by the type of collaborator being sought (Developers, Designers, Audio Creators, Engineers).',
-      'Contributed to account-facing views — Owned Projects and Joined Projects — so students can track what they\'ve started and what they\'ve joined.',
+      'Contributed to account-facing views. Owned Projects and Joined Projects, so students can track what they\'ve started and what they\'ve joined.',
       'Collaborated on the project creation flow that lets a student post a new project and start recruiting a team.',
     ],
     role_detail: 'Front-end Programmer, Team Project',
@@ -105,7 +123,7 @@ const projects = [
     title: 'CR3D',
     role: 'Product Designer Intern — RIT Saunders Kozel Team',
     summary:
-      '"Play More." CR3D is the homebase for casual athletes to stay connected to their people and their sports — coordinating pickup games, leagues, and play history across golf, basketball, tennis, pickleball, and more. Designed 30+ logo concepts and 20+ wireframes/UI mockups to establish the visual identity, and ran 200+ user interviews that directly shaped the product roadmap.',
+      '"Play More." CR3D is the homebase for casual athletes to stay connected to their people and their sports coordinating pickup games, leagues, and play history across golf, basketball, tennis, pickleball, and more. Designed 30+ logo concepts and 20+ wireframes/UI mockups to establish the visual identity, and ran 200+ user interviews that directly shaped the product roadmap.',
     tags: ['Figma', 'UI/UX Design', 'User Research', 'Prototyping', 'Brand Identity'],
     externalUrl: 'https://cr3d.org/',
     externalLabel: 'Visit cr3d.org',

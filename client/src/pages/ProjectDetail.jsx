@@ -77,14 +77,7 @@ function ProjectDetail() {
 
       <div className="project-detail-body">
         {project.overviewColumns || (project.whatIDidIntro && project.overview) ? (
-          <>
-            <hr className="project-divider" />
-            <div className="project-overview-columns">
-              {(project.overviewColumns || [project.overview]).map((text, index) => (
-                <p key={index}>{text}</p>
-              ))}
-            </div>
-          </>
+          <hr className="project-divider" />
         ) : project.gallery ? (
           <>
             <h2>Overview</h2>
@@ -110,26 +103,32 @@ function ProjectDetail() {
 
         {project.whatIDidIntro ? (
           <section className="project-section">
-          <h2 className="project-section-title">What I did in the project</h2>
           <div className="project-narrative">
             <div className="project-narrative-row project-narrative-row-lead">
               <div className="project-narrative-lead">
+                <h2 className="project-section-title">What I did in the project</h2>
                 <p>{project.whatIDidIntro}</p>
               </div>
               <ProjectPhoto image={project.whatIDidImages?.lead} className="project-photo-lg" />
             </div>
 
-            <div className="project-narrative-row">
-              <div className="project-photo-stack">
+            {project.whatIDidBlocks ? (
+              // each paragraph sits in its own row next to its picture
+              project.whatIDidBlocks.map((block, index) => (
+                <div className="project-narrative-row" key={index}>
+                  <ProjectPhoto
+                    image={index === 0 ? project.whatIDidImages?.stackTop : project.whatIDidImages?.stackBottom}
+                    className="project-photo-sm"
+                  />
+                  <p>{block.text}</p>
+                </div>
+              ))
+            ) : (
+              <div className="project-narrative-row">
                 <ProjectPhoto image={project.whatIDidImages?.stackTop} className="project-photo-sm" />
-                <ProjectPhoto image={project.whatIDidImages?.stackBottom} className="project-photo-sm" />
+                <p>{project.whatIDidText}</p>
               </div>
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
-                {project.whatIDidBlocks
-                  ? project.whatIDidBlocks.map((block, index) => <p key={index}>{block.text}</p>)
-                  : <p>{project.whatIDidText}</p>}
-              </div>
-            </div>
+            )}
 
             <ProjectPhoto image={project.whatIDidImages?.full} className="project-photo-full" />
           </div>

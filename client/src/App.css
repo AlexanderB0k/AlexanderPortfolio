@@ -311,7 +311,7 @@ main {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  color: var(--text);
+  color: #fff;
   text-decoration: none;
   font-size: 14px;
   transition: color 0.15s ease, transform 0.15s ease;
@@ -320,6 +320,10 @@ main {
 .project-back-link:hover {
   color: var(--accent);
   transform: translateX(-2px);
+}
+
+.project-detail .tag {
+  color: #fff;
 }
 
 .project-detail-title {
@@ -369,8 +373,9 @@ main {
 
 .project-overview p {
   margin-top: 4px;
-  color: var(--text);
+  color: #fff;
 }
+
 
 .project-overview-grid {
   display: grid;
@@ -523,7 +528,7 @@ main {
 }
 
 .project-highlights li {
-  color: var(--text);
+  color: #fff;
   line-height: 1.6;
 }
 
@@ -545,10 +550,10 @@ main {
   margin: 0;
   color: white;
   line-height: 1.6;
-  font-size: 15px;
+  font-size: 25px;
 }
 
-/* big section heading */
+/* big section headings */
 .project-section {
   margin-top: 72px;
 }
@@ -559,6 +564,10 @@ main {
   letter-spacing: -0.5px;
   line-height: 1.1;
   color: var(--text-h);
+}
+
+.project-detail-body h2.project-section-title-spaced {
+  margin-top: 72px;
 }
 
 @media (max-width: 640px) {
@@ -588,7 +597,7 @@ main {
 
 .project-narrative-row p {
   margin: 0;
-  color: var(--text);
+  color: #fff;
   line-height: 1.65;
 }
 
@@ -651,7 +660,7 @@ main {
 
 /* "what impact did I make" — role | square | text */
 .project-impact-list {
-  margin-top: 16px;
+  margin-top: 24px;
   display: flex;
   flex-direction: column;
   gap: 24px;
@@ -685,7 +694,7 @@ main {
 
 .project-impact-item p {
   margin: 0;
-  color: var(--text);
+  color: #fff;
   line-height: 1.65;
 }
 
@@ -782,4 +791,24 @@ main {
   .hero {
     padding-top: 110px;
   }
+}
+
+/* project pages: all text bright white, whatever the computer's light/dark setting */
+.project-detail .project-detail-title,
+.project-detail-body p,
+.project-detail-body li,
+.project-detail-body h3,
+.project-detail-body h2,
+.project-detail-body h2.project-section-title,
+.project-detail-body .project-narrative-lead p {
+  color: #fff;
+}
+
+/* last photo shows the whole image instead of cropping it to a wide strip */
+.project-photo-full:not(.project-photo-placeholder) {
+  aspect-ratio: auto;
+}
+
+.project-photo-full:not(.project-photo-placeholder) img {
+  height: auto;
 }
