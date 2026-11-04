@@ -1,5 +1,13 @@
 import { Link, useParams } from 'react-router-dom'
-import { FaArrowLeftLong, FaArrowUpRightFromSquare, FaPalette, FaFigma } from 'react-icons/fa6'
+import {
+  FaArrowLeftLong,
+  FaArrowUpRightFromSquare,
+  FaPalette,
+  FaFigma,
+  FaCode,
+  FaUsers,
+  FaMagnifyingGlass,
+} from 'react-icons/fa6'
 import { SiGodotengine } from 'react-icons/si'
 import projects from '../data/projects'
 
@@ -7,6 +15,9 @@ const impactIcons = {
   palette: FaPalette,
   figma: FaFigma,
   godot: SiGodotengine,
+  code: FaCode,
+  users: FaUsers,
+  research: FaMagnifyingGlass,
 }
 
 function ProjectDetailMedia({ media }) {

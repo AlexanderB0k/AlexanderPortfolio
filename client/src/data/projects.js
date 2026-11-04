@@ -88,26 +88,52 @@ const projects = [
     },
     overview:
       "Looking for Group (LFG) is a team-formation platform built for students in RIT's College of Computing and Information Sciences. Students post projects — video games, board games, mobile apps, websites, film, software, and more — browse what others are building, and recruit collaborators by the role they need filled.",
-    gallery: [
+    overviewColumns: [
+      "Looking for Group (LFG) is a team-formation platform built for students in RIT's College of Computing and Information Sciences. Students post projects — video games, board games, mobile apps, websites, film, software, and more — browse what others are building, and recruit collaborators by the role they need filled.",
+      "I worked as a front-end programmer on the team, turning Figma designs into working, responsive pages. I focused on the project discovery experience, the account views for owned and joined projects, and the flow for creating a new project.",
+    ],
+    whatIDidIntro: 'Throughout the project we used Figma for the designs and wireframes, and VS Code to build the front end. I was responsible for translating the Figma designs into working interfaces, building the project discovery and filtering experience, and contributing to the account and project creation views.',
+    whatIDidBlocks: [
       {
-        src: '/images/lfg-sidebar.png',
-        alt: 'LFG sidebar navigation Projects, People, and My Projects',
+        text: 'I built the project discovery experience so students could browse every project on the platform and narrow it down quickly. That meant filtering by category, such as Video Game, Mobile Application, and Website, and by the type of collaborator a project is looking for, such as Developers, Designers, Audio Creators, and Engineers. I kept the layouts faithful to the Figma designs while making sure they stayed responsive across screen sizes.',
       },
       {
-        src: '/images/lfg-notifications.png',
-        alt: 'LFG notifications feed showing recent posts and mentions',
+        text: 'I also worked on the account-facing views. The Owned Projects and Joined Projects pages let students keep track of what they\'ve started and what they\'ve signed on to, and I collaborated on the project creation flow that lets a student post a new project and start recruiting a team right away.',
       },
-      {
-        src: '/images/lfg-my-projects.png',
-        alt: 'LFG My Projects view listing a student’s active, done, and draft projects',
-      },
-      {
+    ],
+    whatIDidImages: {
+      lead: {
         src: '/images/lfg-login.png',
         alt: 'LFG welcome and log in screen',
       },
-      {
+      stackTop: {
+        src: '/images/lfg-sidebar.png',
+        alt: 'LFG sidebar navigation: Projects, People, and My Projects',
+      },
+      stackBottom: {
+        src: '/images/lfg-my-projects.png',
+        alt: 'LFG My Projects view listing a student’s active, done, and draft projects',
+      },
+      full: {
         src: '/images/lfg-onboarding.png',
         alt: 'LFG onboarding illustration walking through exploring profiles, following people, and keeping a profile up to date',
+      },
+    },
+    impact: [
+      {
+        role: 'Front-end Programmer',
+        icon: 'code',
+        text: 'I translated wireframes into working, responsive interfaces and built the browsing and filtering features students use to find projects.',
+      },
+      {
+        role: 'UI Designer',
+        icon: 'figma',
+        text: 'I worked from the team\'s Figma designs, keeping spacing, states, and layout consistent so the pages matched the intended look and feel.',
+      },
+      {
+        role: 'Team Collaboration',
+        icon: 'users',
+        text: 'I collaborated with designers and other developers on the project creation flow and account views so the whole platform fit together.',
       },
     ],
     highlights: [
@@ -134,26 +160,52 @@ const projects = [
     },
     overview:
       'CR3D is a mobile app built through RIT Saunders\' Bernard Kozel StartUp Program, designed to be the homebase for casual athletes — eliminating the friction of organizing pickup games and giving groups a reason to keep playing together, across sports like golf, mini golf, basketball, tennis, and pickleball.',
-    gallery: [
+    overviewColumns: [
+      'CR3D is a mobile app built through RIT Saunders\' Bernard Kozel StartUp Program, designed to be the homebase for casual athletes — eliminating the friction of organizing pickup games and giving groups a reason to keep playing together, across sports like golf, mini golf, basketball, tennis, and pickleball.',
+      'I joined as a product designer intern on a team of four designers and developers. I designed the brand identity and the app\'s wireframes and UI mockups, and ran user interviews that shaped what the team built next.',
+    ],
+    whatIDidIntro: 'Throughout the project I used Figma to design logos, wireframes, UI mockups, and prototypes, working alongside the developers building the app. I was responsible for the product\'s visual identity, the design of key app screens, and the user research behind the roadmap.',
+    whatIDidBlocks: [
       {
+        text: 'I started with the brand, designing 30+ logo concepts to find an identity that felt energetic and social for casual athletes. From there I developed 20+ wireframes and UI mockups, covering player profiles, match result cards, and game coordination and scheduling, and worked with the team to turn them into a functional prototype.',
+      },
+      {
+        text: 'Alongside the design work, I conducted 200+ user interviews to uncover pain points and validate the core idea of social sports connections. What we learned directly shaped the product roadmap, including a community hub with play history, gamification through levels, ranks, and achievements, and league management with drafts, trades, playoffs, and championships.',
+      },
+    ],
+    whatIDidImages: {
+      lead: {
         src: '/images/cr3d-profile.png',
         alt: 'CR3D player profile screen showing sport breakdown and recent matches',
       },
-      {
-        src: '/images/cr3d-icon.png',
-        alt: 'CR3D mini golf hole icon',
-      },
-      {
+      stackTop: {
         src: '/images/cr3d-mini-golf.png',
         alt: 'Mini golf course illustration with a windmill, used in CR3D’s brand art',
       },
-      {
+      stackBottom: {
         src: '/images/cr3d-crown.png',
         alt: 'Gold jeweled crown illustration, part of CR3D’s gamification and ranks concept art',
       },
-      {
+      full: {
         src: '/images/cr3d-match-cards.png',
         alt: 'CR3D match result cards for basketball and tennis games',
+      },
+    },
+    impact: [
+      {
+        role: 'Brand & Visual Design',
+        icon: 'palette',
+        text: 'I designed 30+ logo concepts and the illustrations and visual style that established CR3D\'s identity from the ground up.',
+      },
+      {
+        role: 'UI/UX Designer',
+        icon: 'figma',
+        text: 'I developed 20+ wireframes and UI mockups and helped the team turn them into a working app prototype.',
+      },
+      {
+        role: 'User Research',
+        icon: 'research',
+        text: 'I ran 200+ user interviews that validated the idea and directly shaped the product roadmap.',
       },
     ],
     highlights: [
